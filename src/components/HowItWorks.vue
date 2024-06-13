@@ -5,6 +5,15 @@
 
 <template>
     <div class="container">
+        <div class="top">
+            <div class="star">
+                <img src="./img/Star 5.png" alt="">
+            </div>
+            <div class="ellipse">
+                <img src="./img/Ellipse 17.png" alt="">
+            </div>
+        </div>
+       
         <h2>How It Works</h2>
         <div class="content">
             <div class="boxes">
@@ -17,6 +26,7 @@
                         business and get your <br>
                         account readily available.
                     </p>
+                    <div class="line"></div>
                     <div class="img">
                         <img src="./img/businessman.png" alt="">
                     </div>
@@ -30,6 +40,7 @@
                         including their billing <br>
                         information.
                     </p>
+                    <div class="line"></div>
                     <div class="img">
                         <img src="./img/users-add.png" alt="">
                     </div>
@@ -43,6 +54,7 @@
                         them directly via the email <br>
                         option.
                     </p>
+                    <div class="line"></div>
                     <div class="img">
                         <img src="./img/invoice.png" alt="">
                     </div>
@@ -54,6 +66,7 @@
                         by clients as sales and <br>
                         generate receipts of the sales
                     </p>
+                    <div class="line"></div>
                     <div class="img">
                         <img src="./img/payment.png" alt="">
                     </div>
@@ -69,11 +82,24 @@
     display: flex;
     flex-direction: column;
     padding: 20px;
+    margin-bottom: 50px;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.ellipse{
+ padding: 20px;
+}
+
+.star img{
+    width: 65px;
 }
 
 .container h2{
     text-align: center;
-    margin-top: 50px;
 }
 
 .container h4,p{
@@ -86,8 +112,10 @@
 }
 
 .boxes{
-    display: flex;
-    gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 20px;
 }
 
 .box{
@@ -96,6 +124,9 @@
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 5px 15px rgba(0, 30, 255, 0.253);
+    grid-template-rows: subgrid;
+    grid-row: 1 / 4;
+    text-align: center;
 }
 
 .img{
@@ -109,9 +140,11 @@
     height: auto;
 }
 
-.box p{
-    text-align: center;
+.line{
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.214);
 }
+
 
 
 </style>

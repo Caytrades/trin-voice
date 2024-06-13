@@ -122,7 +122,7 @@ margin-top: 80px;
 
 .box{
     text-align: center;
-    border: solid 3px white;
+    border: solid 5px white;
     border-radius: 10px;
     width: 300px;
 }
